@@ -9,7 +9,7 @@ const [city, setCity] = useState("")
 
 const getWeather = (event) => {
   if (event.key == "Enter") {
-    fetch('api.openweathermap.org/data/2.5/find?q=${city}&units=imperial&appid=${apiKey}').then(
+    fetch(`https://api.openweathermap.org/data/2.5/find?q=${city}&units=imperial&appid=${apiKey}`).then(
       response => response.json()
     ).then(
       data=> {
